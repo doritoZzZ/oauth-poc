@@ -3,11 +3,11 @@
 <head><title>Loading...</title></head>
 <body>
 <script>
-  const code = "08b420f7665898ced40cfc2e9a948ba8";
-  const target = "https://jckv3w97.challenge.appsecmaster.net/link/callback"
-               + "?code=" + code
-               + "&state=ignored";
-  window.location.href = target;
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("code");
+  window.location.href = "https://jckv3w97.challenge.appsecmaster.net/link/callback"
+    + "?code=" + code
+    + "&state=ignored";
 </script>
 </body>
 </html>
